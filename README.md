@@ -4,6 +4,8 @@
 [![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow.svg)](https://www.javascript.com)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-Ready-38B2AC)](https://tailwindcss.com)
 
+Live at: https://thechii.github.io/CompressIT/
+
 CompressIT is a modern, efficient, and user-friendly image compression tool that runs directly in your browser. It allows you to reduce image file sizes while maintaining quality, all without uploading your files to any server.
 
 ## ✨ Features
