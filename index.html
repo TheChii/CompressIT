@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CompressIT - Free online image compression tool to optimize and reduce image file sizes. Easy to use, fast, and secure.">
+    <meta name="keywords" content="image compression, image optimizer, compress images, reduce image size, image optimization tool, photo compression, picture optimizer">
+    <meta name="author" content="CompressIT">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CompressIT - Free Image Compression Tool">
+    <meta property="og:description" content="Efficiently compress and optimize your images. Free, fast, and secure image compression tool.">
+    <meta property="og:image" content="icons/logo-min.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CompressIT - Free Image Compression Tool">
+    <meta name="twitter:description" content="Efficiently compress and optimize your images. Free, fast, and secure image compression tool.">
+    <meta name="twitter:image" content="icons/logo-min.png">
+
+
+    <title>CompressIT</title>
+    <link rel="preload" href="libs/inter.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" crossorigin>
+    <link rel="preload" href="icons/logo-min.png" as="image">
+    <script src="libs/tailwind.js"></script>
+    <link rel="stylesheet" href="css/dialogbox.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="js/image-compressor.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="libs/jszip.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="libs/inter.css" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="loading-container">
+      <div class="loading-status">
+          <div class="loading-spinner"></div>
+          <div class="loading-title">CompressIT is Working</div>
+      </div>
+      <div class="loading-progress">
+          <div class="loading-progress-bar" id="loading-progress-bar"></div>
+      </div>
+      <div class="loading-text" id="loading-text">Optimizing...</div>
+      <div class="loading-details" id="loading-details">0 of 0 images completed</div>
+  </div>
+</div>
+<!-- Header Section -->
+<header class="py-4 bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="icons/logo-min.png" alt="CompressIT Logo" class="h-6 mr-3">
+                <h1 class="text-xl font-semibold text-gray-800">CompressIT</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Section -->
+<section class="py-12 text-center">
+    <div class="container mx-auto px-4 relative z-10" id="hero-container">
+        <div class="flex flex-col items-center justify-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" id="hero-title">CompressIT</h2>
+            <p class="text-lg text-gray-600 mb-6 max-w-2xl" id="hero-description">Efficiently compress images to save space and improve load times.</p>
+        </div>
+      
+        <div class="mt-6 p-6 bg-white rounded-lg shadow-md max-w-3xl mx-auto" 
+     id="drop-area-container">
+            <div id="drop-area" class="flex flex-col justify-center items-center h-48 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition-all duration-300 hover:border-primary-500">
+              <div class="p-4 rounded-full bg-gray-100 mb-4">
+                <i class="fas fa-cloud-upload-alt text-primary-600 text-2xl"></i>
+              </div>
+              <span class="text-gray-700 text-center">
+                <span class="block text-base font-medium">Upload Your Images</span>
+                <span class="block text-sm text-gray-500 my-1">or</span>
+                <span class="block font-medium text-primary-600 hover:text-primary-700 transition-colors">Browse Files</span>
+              </span>
+            </div>
+          </div>
+        <!-- Compression Settings Panel -->
+        <section class="mt-12 max-w-3xl mx-auto">
+            <div class="flex items-center justify-start mb-4 px-2" id="compression-title">
+                <h3 class="text-xl font-semibold text-gray-800">Compression Configuration</h3>
+            </div>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow-md flex flex-col justify-center items-center space-y-4" id="compression-settings">
+                    <label class="block text-base font-medium text-gray-700 text-left w-full" id="compression-label">Compression Level</label>
+                    <p class="text-sm text-gray-500 mb-2">Higher compression reduces file size but may affect image quality</p>
+                    <input id="compression-level" type="range" min="1" max="100" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between mt-1 text-sm text-gray-600 w-full" id="compression-range">
+                        <span class="flex-1 text-left">Minimal</span>
+                        <span class="flex-1 text-center">Standard</span>
+                        <span class="flex-1 text-right">Maximum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="compressed-images-section" class="py-10 bg-gray-50 hidden">
+    <div class="container mx-auto px-4 fade-in">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-semibold text-gray-800">Compressed Images</h3>
+            <div class="flex gap-4">
+                <button class="bg-gray-900 text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition duration-300" onclick="downloadAllImages()">
+                    <i class="fas fa-download mr-2"></i><span>Download All</span>
+                </button>
+                <button class="bg-gray-900 text-white px-4 py-2 rounded text-sm hover:bg-gray-800 transition duration-300" onclick="clearCompressedImages()">
+                    <i class="fas fa-trash mr-2"></i><span>Clear</span>
+                </button>
+            </div>
+        </div>
+        <div id="card-section" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards will be inserted here dynamically -->
+        </div>
+    </div>
+</section>
+
+<script src="js/dialog.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
