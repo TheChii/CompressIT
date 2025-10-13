@@ -17,8 +17,6 @@ CompressIT is a modern, efficient, and user-friendly image compression tool that
 - 🖥️ **Modern Interface**: Clean, responsive design built with Tailwind CSS
 - 📱 **Mobile Friendly**: Works seamlessly on both desktop and mobile devices
 
-## 🚀 Getting Started
-
 ## 🎯 Usage
 
 1. Open CompressIT in your web browser
@@ -41,6 +39,7 @@ CompressIT is built with:
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
