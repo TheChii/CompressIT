@@ -19,27 +19,6 @@ CompressIT is a modern, efficient, and user-friendly image compression tool that
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, or Edge)
-- No additional software required!
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/CompressIT.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd CompressIT
-   ```
-
-3. Open `index.html` in your web browser
-
-Alternatively, you can deploy it to any static web hosting service.
-
 ## 🎯 Usage
 
 1. Open CompressIT in your web browser
@@ -59,23 +38,9 @@ CompressIT is built with:
 - [JSZip](https://stuk.github.io/jszip/) for bulk downloads
 - HTML5 Canvas for image processing
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
 
-- [Font Awesome](https://fontawesome.com) for icons
-- [Inter Font](https://rsms.me/inter/) for typography
-- All contributors and users of CompressIT
 
