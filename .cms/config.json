@@ -2,28 +2,22 @@
   "version": 1,
   "fields": [
     {
-      "id": "9f3107df-c172-4709-b483-35596e18aa99",
+      "id": "ded65caf-27f8-43b6-8faa-ec5207224f7d",
       "type": "text",
       "selector": "#hero-title",
-      "label": "h2"
+      "label": "Page title"
     },
     {
-      "id": "b0597fd8-f9d5-4e31-b7b3-e223cbbab7c8",
-      "type": "text",
-      "selector": "div:nth-of-type(2) > span:nth-of-type(2)",
-      "label": "span"
-    },
-    {
-      "id": "2844729d-a835-4948-a618-b25844cfc711",
-      "type": "text",
-      "selector": "img",
-      "label": "img"
-    },
-    {
-      "id": "29d209c3-d09f-41e8-88d2-2ad4ac7b3665",
+      "id": "9693cb16-e6e1-487d-9853-53342ede03a0",
       "type": "text",
       "selector": "div:nth-of-type(2) > span:nth-of-type(3)",
       "label": "span"
+    },
+    {
+      "id": "4c25bace-b3b9-4948-9485-9ab634b58dd2",
+      "type": "text",
+      "selector": "div:nth-of-type(2) > span:nth-of-type(2)",
+      "label": "ss"
     }
   ]
 }
