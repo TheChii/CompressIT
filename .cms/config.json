@@ -18,6 +18,12 @@
       "type": "text",
       "selector": "img",
       "label": "img"
+    },
+    {
+      "id": "29d209c3-d09f-41e8-88d2-2ad4ac7b3665",
+      "type": "text",
+      "selector": "div:nth-of-type(2) > span:nth-of-type(3)",
+      "label": "span"
     }
   ]
 }
