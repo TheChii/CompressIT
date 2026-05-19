@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "fields": [
+    {
+      "id": "9f3107df-c172-4709-b483-35596e18aa99",
+      "type": "text",
+      "selector": "#hero-title",
+      "label": "h2"
+    },
+    {
+      "id": "b0597fd8-f9d5-4e31-b7b3-e223cbbab7c8",
+      "type": "text",
+      "selector": "div:nth-of-type(2) > span:nth-of-type(2)",
+      "label": "span"
+    },
+    {
+      "id": "2844729d-a835-4948-a618-b25844cfc711",
+      "type": "text",
+      "selector": "img",
+      "label": "img"
+    }
+  ]
+}
