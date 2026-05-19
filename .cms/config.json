@@ -2,22 +2,28 @@
   "version": 1,
   "fields": [
     {
-      "id": "ded65caf-27f8-43b6-8faa-ec5207224f7d",
+      "id": "5567d754-4587-4ff6-b900-ad37a85389f5",
       "type": "text",
       "selector": "#hero-title",
-      "label": "Page title"
+      "label": "h2"
     },
     {
-      "id": "9693cb16-e6e1-487d-9853-53342ede03a0",
+      "id": "690b5590-b4d2-45df-98be-459d3bd20692",
       "type": "text",
-      "selector": "div:nth-of-type(2) > span:nth-of-type(3)",
+      "selector": "#compression-range > span:nth-of-type(3)",
       "label": "span"
     },
     {
-      "id": "4c25bace-b3b9-4948-9485-9ab634b58dd2",
+      "id": "9b920c00-0a4e-41bf-af1d-f65df7bda322",
       "type": "text",
-      "selector": "div:nth-of-type(2) > span:nth-of-type(2)",
-      "label": "ss"
+      "selector": "h1",
+      "label": "h1"
+    },
+    {
+      "id": "39b0b830-770d-4cd8-99f0-9abb8679cd45",
+      "type": "text",
+      "selector": "span > span:nth-of-type(3)",
+      "label": "span"
     }
   ]
 }
