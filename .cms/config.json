@@ -34,8 +34,8 @@
           "label": "i"
         },
         {
-          "id": "3c589912-4065-4225-bcb0-1dbd76095cab",
-          "type": "text",
+          "id": "5c9d0a8a-4e8f-4ed3-85cb-5a47b8471999",
+          "type": "image-src",
           "selector": "img",
           "label": "img"
         }
